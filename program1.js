@@ -13,18 +13,17 @@ const getTotalIsles = function (grid) {
       
       grid[r][c] = 'W';
       
-      dfs(r + 1, c); // Down
-      dfs(r - 1, c); // Up
-      dfs(r, c + 1); // Right
-      dfs(r, c - 1); // Left
+      dfs(r + 1, c); 
+      dfs(r - 1, c); 
+      dfs(r, c + 1); 
+      dfs(r, c - 1); 
   }
 
   let islandCount = 0;
 
-  // Traverse the grid
   for (let i = 0; i < rows; i++) {
       for (let j = 0; j < cols; j++) {
-          if (grid[i][j] === 'L') {  // Found an unvisited landmass
+          if (grid[i][j] === 'L') {  
               dfs(i, j);  // Perform DFS to mark the whole island
               islandCount++;  // Increment island count
           }
