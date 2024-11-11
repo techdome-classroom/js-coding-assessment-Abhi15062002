@@ -4,9 +4,8 @@ const decodeTheRing = function (s, p) {
                   .replace(/\*/g, '.*')  
                   .replace(/\?/g, '.')    
   
-  const regex = new RegExp('^' + pattern + '$');  / Ensure it matches the entire strin
-  return regex.test(s);  // Return true if the message matches the pattern
-
+  const regex = new RegExp('^' + pattern + '$');  
+  return regex.test(s);  
 };
 
 module.exports = decodeTheRing;
