@@ -6,7 +6,6 @@ const getTotalIsles = function (grid) {
   let rows = grid.length;
   let cols = grid[0].length;
   
-  // Helper function for DFS traversal
   function dfs(r, c) {
       // Check if the current position is out of bounds or water ('W')
       if (r < 0 || r >= rows || c < 0 || c >= cols || grid[r][c] === 'W') {
