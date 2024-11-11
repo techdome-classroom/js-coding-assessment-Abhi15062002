@@ -10,21 +10,17 @@ const decodeTheRing = function (s, p) {
           star = j++;
           match = i;
       } else if (star !== -1) {
-          // if no match, but "*" was found earlier, try advancing the message pointer to match more
           j = star + 1;
           i = ++match;
       } else {
-          // if no match is found and no "*" to backtrack, return false
           return false;
       }
   }
 
-  // Skip remaining "*" characters in the pattern
   while (j < p.length && p[j] === '*') {
       j++;
   }
 
-  // If we have exhausted both the message and pattern, return true, otherwise false
   return j === p.length;
 };
 
