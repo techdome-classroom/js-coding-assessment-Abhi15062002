@@ -4,7 +4,6 @@ const decodeTheRing = function (s, p) {
 
   while (i < s.length) {
       if (j < p.length && (p[j] === s[i] || p[j] === '?')) {
-          // if characters match or there is a "?", move both pointers
           i++;
           j++;
       } else if (j < p.length && p[j] === '*') {
