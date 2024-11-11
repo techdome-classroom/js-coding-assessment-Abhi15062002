@@ -1,6 +1,5 @@
 const decodeTheRing = function (s, p) {
 
-  // Convert the decoder key to a regex pattern
   let pattern = p
                   .replace(/\*/g, '.*')  // Star symbol matches any sequence of characters
                   .replace(/\?/g, '.')    // Question mark matches exactly one character
