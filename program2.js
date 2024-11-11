@@ -7,7 +7,6 @@ const decodeTheRing = function (s, p) {
           i++;
           j++;
       } else if (j < p.length && p[j] === '*') {
-          // if "*" is found, mark its position and try to match the next character in message
           star = j++;
           match = i;
       } else if (star !== -1) {
