@@ -1,5 +1,5 @@
 const decodeTheRing = function (s, p) {
-  let i = 0, j = 0; // pointers for message (s) and pattern (p)
+  let i = 0, j = 0; 
   let star = -1, match = -1;
 
   while (i < s.length) {
