@@ -7,15 +7,12 @@ const getTotalIsles = function (grid) {
   let cols = grid[0].length;
   
   function dfs(r, c) {
-      // Check if the current position is out of bounds or water ('W')
       if (r < 0 || r >= rows || c < 0 || c >= cols || grid[r][c] === 'W') {
           return;
       }
       
-      // Mark the current land cell as visited by changing it to water ('W')
       grid[r][c] = 'W';
       
-      // Explore in four directions (up, down, left, right)
       dfs(r + 1, c); // Down
       dfs(r - 1, c); // Up
       dfs(r, c + 1); // Right
